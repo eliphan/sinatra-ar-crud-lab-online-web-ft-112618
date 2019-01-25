@@ -1,4 +1,5 @@
-<h1><%= @article.title %></h1> <%# This is to display the articles to the user, aka to post the object and its attributes to the view %>
+<%# This is to display the articles to the user, aka to post the object and its attributes to the view %>
+<h1><%= @article.title %></h1> 
 <%= @article.content %>
 
 <form method="post" action="/articles/<%= @article.id %>">
