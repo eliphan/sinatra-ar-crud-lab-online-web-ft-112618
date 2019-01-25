@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
     redirect to "/articles"
   end  
 
-#this will render the index page with 
+#this will render the index page with an instance varible of all of the articles
   get '/articles' do
     @articles = Article.all
     erb :index
