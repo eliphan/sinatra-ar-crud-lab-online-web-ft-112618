@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
     erb :index
   end  
   
-#Active Record will find the article with id number set by the params, grab that article, and set it to the instance variable @article 
+#Active Record will find the article with id number set by the params, grab that article, and show it to the user
    get 'articles/:id' do
     @article = Article.find(params[:id])
     erb :show
