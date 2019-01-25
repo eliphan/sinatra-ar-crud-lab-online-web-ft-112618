@@ -21,7 +21,7 @@ class ApplicationController < Sinatra::Base
  #create new object based on the params of the form data created in new.erb. The new object will be stored in @articles. Then redirect the user to the page based on the id number from the params.
   post '/articles' do
     @article = Article.create(params) #creating a new object with an unique id number
-    redirect to "/articles/#{ @article.id }" #redirect to newly-created object based on id
+    redirect to "/articles/#{ @article.id }" #redirect to newly-created object based on id number
   end  
   
 #this will render the index page and show a list of all of the articles
