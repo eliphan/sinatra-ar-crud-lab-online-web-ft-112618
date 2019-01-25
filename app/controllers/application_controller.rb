@@ -19,6 +19,7 @@ class ApplicationController < Sinatra::Base
   end
   
   get '/articles' do
+    @articles.all
   end
   
 end
