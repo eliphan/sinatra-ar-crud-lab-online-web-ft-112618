@@ -42,6 +42,7 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
   
+  #Active Record will retrieve the article with the id number set by the params, then perform update on to it based on the date gathered from the params from the form in edit.erb. It then save the article and redirect the user to that article.
   patch '/articles/:id' do
     @article = Article.find(params[:id])
     @article.update(params[:article])
