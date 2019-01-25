@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
     erb :index
   end  
   
-#create new object in the class Article in the article model, then set it to an instance variable.
+#create new object in the model class Article, then set it to an instance variable.
   get '/articles/new' do
     @article = Article.new
     erb :new
