@@ -18,13 +18,13 @@ class ApplicationController < Sinatra::Base
     erb :index
   end  
   
-#create new object in the class Article in the article model, then set it to an instance variable. This will be stored inside @articles
+#create new object in the class Article in the article model, then set it to an instance variable.
   get '/articles/new' do
     @article = Article.new
     erb :new
   end
 
-  
+#create new object based on the params   
   post '/articles' do
     @article = Article.create(params)
     redirect to "/articles/#{ @article.id }"
