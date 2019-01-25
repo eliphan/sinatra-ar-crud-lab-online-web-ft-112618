@@ -25,7 +25,7 @@ class ApplicationController < Sinatra::Base
     redirect to "/articles/#{ @article.id }"
   end
   
-#this will render the index page with an instance varible of all of the articles
+#this will render the index page with an instance varible of all of the articles created
   get '/articles' do
     @articles = Article.all
     erb :index
