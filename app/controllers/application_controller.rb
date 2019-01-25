@@ -29,8 +29,6 @@ class ApplicationController < Sinatra::Base
     @articles = Article.all
     erb :index
   end  
-   
-
   
 #Active Record will find the article with id number set by the params, grab that article, and set it to the instance variable @article 
    get 'articles/:id' do
