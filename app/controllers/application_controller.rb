@@ -49,7 +49,7 @@ class ApplicationController < Sinatra::Base
     redirect to "/articles/#{@article.id}"
   end
 
-#Active Record will delete a specific article based on the params. It works like the .find method. Then the program will redirect to the index.
+#Active Record will delete a specific article based on the params. It works like the .find method. Then the program will redirect to the index page.
   delete "/articles/:id" do
     Article.destroy(params[:id])
     redirect to "/articles"
