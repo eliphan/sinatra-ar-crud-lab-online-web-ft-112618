@@ -24,7 +24,11 @@ class ApplicationController < Sinatra::Base
     redirect to "/articles/#{ @article.id }"
   end
   
-  
+#Active Record will find the article with id number set by the params, grab that article and set it to the instance variable @article 
+   get 'articles/:id' do
+    @article = Article.find(params[:id])
+    erb :show
+  end 
   
 #this will render the index page with an instance varible of all of the articles created
   get '/articles' do
