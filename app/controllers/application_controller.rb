@@ -24,7 +24,7 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
-#create new object based on the params of the form data on new.erb
+#create new object based on the params of the form data in new.erb
   post '/articles' do
     @article = Article.create(params)
     redirect to "/articles/#{ @article.id }"
