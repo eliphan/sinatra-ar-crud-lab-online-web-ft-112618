@@ -13,7 +13,8 @@ class ApplicationController < Sinatra::Base
   end
   
   post '/articles' do
-    
+    Article.create
+    Model.create(some_attribute: params[:some_attribute])
     erb :index
   end
   
