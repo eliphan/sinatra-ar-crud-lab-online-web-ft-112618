@@ -12,12 +12,7 @@ class ApplicationController < Sinatra::Base
     redirect to "/articles"
   end  
 
-#this will render the index page with an instance varible of all of the articles created by the action below
-  get '/articles' do
-    @articles = Article.all
-    erb :index
-  end  
-  
+
 #create new object in the model class Article, then set it to an instance variable.
   get '/articles/new' do
     @article = Article.new
