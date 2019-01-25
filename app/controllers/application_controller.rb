@@ -16,6 +16,8 @@ class ApplicationController < Sinatra::Base
     @article = Article.new
     erb :new
   end
+
+  
   
   post '/articles' do
     Article.create(params)
@@ -23,10 +25,7 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
   
-  get '/articles' do
-    @articles = Article.all
-    erb :index
-  end
+
   
   get 'articles/:id' do
     @articles = Article.find(params[:id])
