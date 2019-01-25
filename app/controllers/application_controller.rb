@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
     erb :show
   end 
 
-  end
+
  get '/' do
     redirect to "/articles"
   end
