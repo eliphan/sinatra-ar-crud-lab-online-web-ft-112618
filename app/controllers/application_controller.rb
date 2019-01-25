@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
     redirect to "/articles"
   end  
 
-#create new object in the model class Article, then set it to an instance variable.
+#create new object in the model class Article, then set it to an instance variable. This will not be stored inside @articles
   get '/articles/new' do
     @article = Article.new
     erb :new
