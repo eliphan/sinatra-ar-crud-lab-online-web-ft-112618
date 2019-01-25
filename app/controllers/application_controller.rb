@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
   
-#this will render the index page with an instance varible of all of the articles created
+#this will render the index page and show a list of all of the articles
   get '/articles' do
     @articles = Article.all
     erb :index
