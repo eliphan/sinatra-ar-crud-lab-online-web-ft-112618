@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
     erb :show
   end 
 
-#Active Record will find the article with id number set by the params, render the edit view and allow the user to edit that article
+#Active Record will find the article with id number set by the params, render the edit view and allow the user to edit that specific article using the form in edit.erb. The edited article will then be posted to the patch action.
   get '/articles/:id/edit' do
     @article = Article.find(params[:id])
     erb :edit
