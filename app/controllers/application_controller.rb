@@ -31,13 +31,11 @@ class ApplicationController < Sinatra::Base
   end  
   
 #Active Record will find the article with id number set by the params, grab that article, and show it to the user
-   get 'articles/:id' do
+   get "/articles/:id" do
     @article = Article.find(params[:id])
     erb :show
   end 
-  get "/articles/:id" do
-    @article = Article.find(params[:id])
-    erb :show
+
   end
  get '/' do
     redirect to "/articles"
