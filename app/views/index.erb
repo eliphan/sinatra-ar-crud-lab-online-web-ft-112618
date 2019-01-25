@@ -1,5 +1,5 @@
 <ul>
-<% @articles.each do |article| %> <%# This will interate the @article hash which content all the created articles. We need to interate block in order to display all objects. Otherwise it will just show a hash of id,title,content. We just need to display title here for the index page. %>
+<% @articles.each do |article| %> <%# This will interate the @article hash which content all the created articles. We need to interate block in order to display all objects. Otherwise it will just show a hash of id,title,content. %>
   <li>
     <a href="/articles/<%= article.id %>"> <%# This is a link to the individual article. The link is created using the article unique id number. We then use string interpolation to show the id %>
       <%= article.title %> 
