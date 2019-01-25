@@ -1,4 +1,5 @@
-<form action="/articles/<%= @article.id %>}" method="post"> <%# The 'action' attribute of the form tag tells which route should the form send its data to. In this case it will be sent to the specific article with the id number set by the params(user's input). The form data will be post into the 'patch' controller action %>
+<form action="/articles/<%= @article.id %>}" method="post">
+   <%# The 'action' attribute of the form tag tells which route should the form send its data to. In this case it will be sent to the specific article with the id number set by the params(user's input). The form data will be post into the 'patch' controller action %>
   <input id="hidden" type="hidden" name="_method" value="PATCH">
   <input type="text" ...>
 </form>
